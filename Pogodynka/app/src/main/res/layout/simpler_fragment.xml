@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.SimplerFragment"
+    android:background="#111">
+
+    <Switch
+        android:id="@+id/changeViewSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minHeight="40dp"
+        android:text="@string/elder_view"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <TextView
+        android:id="@+id/townName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/temperatureValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Gliwice"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/temperatureValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescription"
+
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toEndOf="@+id/wheatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/townName"
+        tools:text="21" />
+
+    <TextView
+        android:id="@+id/celciusLable"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="℃"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescription"
+        app:layout_constraintStart_toEndOf="@+id/temperatureValue"
+        app:layout_constraintTop_toBottomOf="@+id/townName" />
+
+    <TextView
+        android:id="@+id/weatherDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/sunriseValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wheatherIcon"
+        tools:text="Sunny"
+        android:textColor="@color/teal_200"/>
+
+    <TextView
+        android:id="@+id/dateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12.03.22 04:53" />
+
+
+    <TextView
+        android:id="@+id/sunriseValue"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pressureLabel"
+        app:layout_constraintEnd_toStartOf="@+id/sunsetValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescription"
+        tools:text="07:23" />
+
+
+    <!--Sunset end-->
+
+    <!--Pressure start-->
+
+    <TextView
+        android:id="@+id/sunsetValue"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/windLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sunriseValue"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescription"
+        tools:text="19:23" />
+
+    <TextView
+        android:id="@+id/pressureValue"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/townNameInput"
+        app:layout_constraintEnd_toStartOf="@id/windSpeedValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressureLabel"
+        tools:text="1016 hPa" />
+
+    <!--Pressure end-->
+
+    <!--Wind speed start-->
+
+
+    <TextView
+        android:id="@+id/pressureLabel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Pressure"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pressureValue"
+        app:layout_constraintEnd_toStartOf="@id/windLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sunriseValue" />
+
+    <TextView
+        android:id="@+id/windLabel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Wind speed"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/windSpeedValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pressureLabel"
+        app:layout_constraintTop_toBottomOf="@+id/sunsetValue" />
+    <TextView
+        android:id="@+id/windSpeedValue"
+        tools:text="4.29 km/h"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/townNameInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pressureValue"
+        app:layout_constraintTop_toBottomOf="@+id/windLabel" />
+    <!--Wind speed end-->
+
+    <EditText
+        android:id="@+id/townNameInput"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressureValue"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="Nazwa miasta"/>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="SEARCH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/townNameInput" />
+
+    <ImageView
+        android:id="@+id/wheatherIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/townName" />
+
+    <ImageView
+        android:id="@+id/sunriseIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/sunrise"
+        app:layout_constraintBottom_toTopOf="@+id/pressureLabel"
+        app:layout_constraintEnd_toStartOf="@+id/sunriseValue"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescription"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/sunsetIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/sunset"
+        app:layout_constraintBottom_toTopOf="@+id/windLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/sunsetValue"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescription"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
